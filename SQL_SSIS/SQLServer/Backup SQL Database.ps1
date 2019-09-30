@@ -2,7 +2,7 @@
 #-NoProfile -NoLogo -NonInteractive -ExecutionPolicy Bypass -File C:\MetadataBackup
 
 $dt = Get-Date -Format yyyyMMdd
-$dbname = "ECP_Metadata"
+$dbname = "Metadata"
 $srvr = "APP01"
 $backupDest = "E:\BACKUPS\Metadata_Backup\" + $dbname + ".bak"
 
