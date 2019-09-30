@@ -3,7 +3,7 @@
 
 $dt = Get-Date -Format yyyyMMdd
 $dbname = "ECP_Metadata"
-$srvr = "IDMREA1VAPP01"
+$srvr = "APP01"
 $backupDest = "E:\BACKUPS\Metadata_Backup\" + $dbname + ".bak"
 
 Backup-SqlDatabase -ServerInstance $srvr -Database $dbname -BackupFile $backupDest -Initialize
