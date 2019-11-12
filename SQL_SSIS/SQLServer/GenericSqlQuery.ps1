@@ -2,8 +2,6 @@
 [string] $Database = "MyDatabase"
 [string] $UserSqlQuery= $("SELECT * FROM [dbo].[User]")
 
-$resultsDatatable = GenericSqlQuery $Server $Database $UserSqlQuery 
-
 function GenericSqlQuery ($Server, $Database, $SQLQuery) {
     $Datatable = New-Object System.Data.DataTable
     
@@ -21,6 +19,8 @@ function GenericSqlQuery ($Server, $Database, $SQLQuery) {
     
     return $Dataset.Tables[0]
 }
+
+$resultsDatatable = GenericSqlQuery $Server $Database $UserSqlQuery 
 
 #validate we got data
 Write-Host ("The table contains: " + $resultsDatatable.Rows.Count + " rows")
