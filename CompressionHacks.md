@@ -1,5 +1,5 @@
 # Compressing XML File
-# Thanks to https://community.idera.com for the script
+
 
 ```PowerShell
 $Path = "$env:TEMP\data1.xml"
@@ -19,3 +19,26 @@ $length2 = (Get-Item -Path $ZipPath).Length
 $compression = $length2 * 100 / $length1
 "Compression Ratio {0:n2} %" -f $compression 
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks to [Idera Power Tips](https://community.idera.com/database-tools/powershell/powertips/b/tips/posts/compressing-serialized-data) for the script
