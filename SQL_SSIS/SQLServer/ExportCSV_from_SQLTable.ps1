@@ -3,5 +3,7 @@ $databaseName = "SampleDB"
 $filename = "C:\DATA\Customers.txt"
 $delimiter = "|"
 
-Invoke-SqlCmd -Query "SELECT * FROM SampleText" -ServerInstance $instanceName -Database $databaseName |
+$ExportQry = "SELECT * FROM SampleText" 
+
+Invoke-SqlCmd -Query $ExportQry -ServerInstance $instanceName -Database $databaseName |
 Export-Csv -Delimiter $delimiter -NoType $fileName
