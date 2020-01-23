@@ -1,3 +1,5 @@
+# Schema Script for Views
+Create SQL file for scripts of views in a database
 
 ```PowerShell
 $fpath = "F:\CWC_CustomerMDM\DB_Scripts\VIEWS"
