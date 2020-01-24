@@ -28,3 +28,15 @@ foreach ($table in $tables) {
     }
 }
 ```
+
+Out of above code will result in following declaration of variables.
+```T-SQL
+/*tblAppDetails*/
+Declare @ID int = '$(POWERSHELL_VAR)'
+Declare @FILTER_ID int = '$(POWERSHELL_VAR)'
+Declare @COMPUTER_ID int = '$(POWERSHELL_VAR)'
+Declare @INSTALL_DATE datetime = '$(POWERSHELL_VAR)'
+Declare @VERSION_ID nvarchar(20) = '$(POWERSHELL_VAR)'
+Declare @DISPLAY_NAME nvarchar(50) = '$(POWERSHELL_VAR)'
+Declare @REPORT_DATE datetime = '$(POWERSHELL_VAR)'
+```
