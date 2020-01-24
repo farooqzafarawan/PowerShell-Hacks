@@ -30,7 +30,7 @@ foreach ($table in $tables) {
 ```
 
 Out of above code will result in following declaration of variables.
-```T-SQL
+```TSQL
 /*tblAppDetails*/
 Declare @ID int = '$(POWERSHELL_VAR)'
 Declare @FILTER_ID int = '$(POWERSHELL_VAR)'
