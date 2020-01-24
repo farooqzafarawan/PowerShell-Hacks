@@ -35,11 +35,9 @@ foreach ($table in $tables) {
 Out of above code will result in following declaration of variables.
 ```TSQL
 /*tblAppDetails*/
-Declare @ID int = '$(POWERSHELL_VAR)'
-Declare @FILTER_ID int = '$(POWERSHELL_VAR)'
-Declare @COMPUTER_ID int = '$(POWERSHELL_VAR)'
-Declare @INSTALL_DATE datetime = '$(POWERSHELL_VAR)'
-Declare @VERSION_ID nvarchar(20) = '$(POWERSHELL_VAR)'
-Declare @DISPLAY_NAME nvarchar(50) = '$(POWERSHELL_VAR)'
-Declare @REPORT_DATE datetime = '$(POWERSHELL_VAR)'
+Declare @ID int = '$ID'
+Declare @FILTER_ID int = 'FILTER_ID'
+Declare @INSTALL_DATE datetime = 'INSTALL_DATE'
+Declare @DISPLAY_NAME nvarchar(50) = 'DISPLAY_NAME'
+Declare @REPORT_DATE datetime = 'REPORT_DATE'
 ```
