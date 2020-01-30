@@ -18,4 +18,6 @@ sc.exe delete ServiceName
 For PowerShell >= 6
 ```PowerShell
 Remove-Service -Name ServiceName
+OR
+Get-Service -Name "Elasticsearch" | Remove-Service
 ```
