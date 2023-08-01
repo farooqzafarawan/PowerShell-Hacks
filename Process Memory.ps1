@@ -3,5 +3,4 @@ Get-Process| Sort-Object WorkingSet64| Select-Object Name,@{Name='WorkingSet';Ex
 
 
 # Get-Process with total memory usage
-get-process -computername $tag1 | Group-Object -Property ProcessName | 
-    Format-Table Name, @{n='Mem (KB)';e={'{0:N0}' -f (($_.Group|Measure-Object WorkingSet64 -Sum).Sum / 1KB)};a='right'} -AutoSize
+get-process| Group-Object -Property ProcessName| Format-Table Name, @{n='Mem (KB)';e={'{0:N0}' -f (($_.Group|Measure-Object WorkingSet64 -Sum).Sum / 1KB)};a='right'} -AutoSize
